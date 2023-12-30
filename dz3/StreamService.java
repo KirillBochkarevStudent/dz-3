@@ -21,7 +21,7 @@ public class StreamService {
     }
     public List<StudentGroup> getSortedStream(){
         List<StudentGroup> groups1 = new ArrayList<>(groups.getStudentGroups());
-        Collections.sort(groups1);
+        groups1.sort(new StreamComporator());
         return groups1;
     }
 }
